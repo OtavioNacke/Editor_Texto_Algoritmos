@@ -33,6 +33,12 @@ while True:
         else:
             texto = palavra + texto  #se o cursor for 0, estiver no inicio, n precisa colocar espaço antes. (eu n sei se a gente coloca espaço depois, faz sentido, mas n ta no enunciado)
             cursor += len(palavra)
+    
+    elif comando[0] == 'x':
+        caracteres = list(texto) #transforma o texto em uma lista de caracteres
+        caracteres.pop(cursor) #remove o caractere onde o cursos esta em cima
+        texto = "".join(caracteres) #transforma a lista em string de volta
+        
 
 
 
