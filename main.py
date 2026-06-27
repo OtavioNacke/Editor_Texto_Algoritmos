@@ -35,9 +35,10 @@ while True:
             cursor += len(palavra)
     
     elif comando[0] == 'x':
-        caracteres = list(texto) #transforma o texto em uma lista de caracteres
-        caracteres.pop(cursor) #remove o caractere onde o cursor esta em cima
-        texto = "".join(caracteres) #transforma a lista em string de volta
+        if cursor < len(texto): #se o cursor estiver no final do texto, n faz nada
+            caracteres = list(texto) #transforma o texto em uma lista de caracteres
+            caracteres.pop(cursor) #remove o caractere deppois do cursor
+            texto = "".join(caracteres) #transforma a lista em string de volta
         
 
 
