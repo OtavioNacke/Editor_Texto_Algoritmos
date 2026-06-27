@@ -36,7 +36,7 @@ while True:
     
     elif comando[0] == 'x':
         caracteres = list(texto) #transforma o texto em uma lista de caracteres
-        caracteres.pop(cursor) #remove o caractere onde o cursos esta em cima
+        caracteres.pop(cursor) #remove o caractere onde o cursor esta em cima
         texto = "".join(caracteres) #transforma a lista em string de volta
         
 
