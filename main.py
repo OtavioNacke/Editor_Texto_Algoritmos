@@ -39,7 +39,28 @@ while True:
             caracteres = list(texto) #transforma o texto em uma lista de caracteres
             caracteres.pop(cursor) #remove o caractere deppois do cursor
             texto = "".join(caracteres) #transforma a lista em string de volta
-        
+    
+
+    elif comando[0] == 'X':
+
+        if cursor < len(texto) and texto[cursor] not in " .,": #n estar em um espaço, ponto ou vírgula
+
+            inicio = cursor #começar a contar do cursor
+            fim = cursor    #idem
+
+            
+            while inicio > 0 and texto[inicio-1] not in " .,": #achar inicio da palavra, inicio > 0 pq n pode ir pra posição -1
+                inicio -= 1    #vai voltando até achar um espaço, ponto ou vírgula
+
+            
+            while fim < len(texto) and texto[fim] not in " .,": #achar fim da palavra, fim < len(texto) pq n pode ir pro final
+                fim += 1   #vai andando até achar um espaço, ponto ou vírgula
+
+            if inicio > 0 and texto[inicio-1] == " ": #remover o espaço antes da palavra
+                inicio -= 1
+
+            texto = texto[:inicio] + texto[fim:]
+            cursor = inicio #posicionar antes da proxima palavra
 
 
 
