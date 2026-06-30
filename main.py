@@ -49,7 +49,7 @@ while True:
             fim = cursor    #começar a contar do cursor
 
             
-            while inicio > 0 and texto[inicio-1] not in " .,": #achar inicio da palavra, inicio > 0 pq n pode ir pra posição -1
+            while inicio > 0 and texto[inicio-1] not in " .,": #achar inicio da palavra, inicio > 0 pois não pode ir pra posição -1
                 inicio -= 1    #vai voltando até achar um espaço, ponto ou vírgula
 
             
